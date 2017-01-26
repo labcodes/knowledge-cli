@@ -1,30 +1,30 @@
-## Knowledge CLI
+## Labcodes CLI
 
-> Post links through the command line.
+> Just one command line.
 
 ### Usage
 
 First, you need to install globally:
 
 ```
-  sudo npm install -g lab-knowledge
+  sudo npm install -g labcodes
 ```
 
 If you need some help, can you use:
 
 ```
-  labKnowledge --help
+  labcodes --help
 ```
 
 This version has two single methods:
 
 ```
-  labKnowledge sum 1 2
+  labcodes sum 1 2
   > returns the sum of two numbers
 ```
 
 ```
-  labKnowledge addLink
+  labcodes addLink
   > returns the paste link
 ```
 
@@ -36,4 +36,4 @@ npm run watch
 
 ### NPM
 
-This tools was published [here](https://www.npmjs.com/package/lab-knowledge).
+This tools was published [here](https://www.npmjs.com/package/labcodes).
