@@ -16,7 +16,7 @@ If you need some help, can you use:
   labcodes --help
 ```
 
-This version has two single methods:
+This version has three single methods:
 
 ```
   labcodes sum 1 2
@@ -24,8 +24,13 @@ This version has two single methods:
 ```
 
 ```
-  labcodes addLink
-  > returns the paste link
+  labcodes knowledge {url}
+  > returns the posted link
+```
+
+```
+  labcodes spotify
+  > returns the spotify playlist
 ```
 
 ### Tests
