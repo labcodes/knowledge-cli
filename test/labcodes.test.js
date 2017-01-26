@@ -45,4 +45,26 @@ describe('Labcodes', function() {
       done();
     });
   });
+
+  it('The command `forks update` should return the update.', function(done) {
+    let updateResult = 'Updating project..';
+
+    exec(labcodes + ' forks update ', function(err, stdout, stderr) {
+      if (err) throw err;
+
+      stdout.replace('\n', '').should.be.equal(updateResult);
+      done();
+    });
+  });
+
+  it('The command `forks open` should return the open.', function(done) {
+    let openResult = 'Click on: http://forksmealplanner.com';
+
+    exec(labcodes + ' forks open ', function(err, stdout, stderr) {
+      if (err) throw err;
+
+      stdout.replace('\n', '').should.be.equal(openResult);
+      done();
+    });
+  });
 });

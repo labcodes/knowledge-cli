@@ -16,23 +16,6 @@ If you need some help, can you use:
   labcodes --help
 ```
 
-This version has three single methods:
-
-```
-  labcodes sum 1 2
-  > returns the sum of two numbers
-```
-
-```
-  labcodes knowledge {url}
-  > returns the posted link
-```
-
-```
-  labcodes spotify
-  > returns the spotify playlist
-```
-
 ### Tests
 
 ```
