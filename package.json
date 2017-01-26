@@ -1,8 +1,8 @@
 {
-  "name": "lab-knowledge",
+  "name": "labcodes",
   "version": "0.0.1",
-  "description": "Post links through the CLI.",
-  "main": "knowledge.js",
+  "description": "Labcodes CLI",
+  "main": "labcodes.js",
   "scripts": {
     "test": "istanbul cover _mocha -- -R spec",
     "watch": "istanbul cover _mocha -- -R spec --watch"
@@ -11,7 +11,7 @@
   "license": "ISC",
   "preferGlobal": true,
   "bin": {
-    "labKnowledge": "knowledge.js"
+    "labcodes": "labcodes.js"
   },
   "devDependencies": {
     "istanbul": "^0.4.5",
