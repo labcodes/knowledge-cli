@@ -1,24 +1,14 @@
 {
-  "name": "labcodes",
-  "version": "0.0.1",
+  "name": "labcodes-cli",
+  "version": "1.0.0",
   "description": "Labcodes CLI",
-  "main": "labcodes.js",
-  "scripts": {
-    "test": "istanbul cover _mocha -- -R spec",
-    "watch": "istanbul cover _mocha -- -R spec --watch"
-  },
-  "author": "Thulio Philipe <thulioph@gmail.com>",
-  "license": "ISC",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Thulio Philipe <thulio@labcodes.com.br>",
+  "license": "MIT",
   "preferGlobal": true,
-  "bin": {
-    "labcodes": "labcodes.js"
-  },
   "devDependencies": {
-    "istanbul": "^0.4.5",
-    "mocha": "^3.2.0",
-    "should": "^11.1.2"
   },
   "dependencies": {
-    "commander": "^2.9.0"
   }
 }
