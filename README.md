@@ -54,7 +54,7 @@ $ npm install -g labcodes-cli
 To start a new project, Frontend or Backend you need to type:
 
 ```sh
-$ labcodes start-project
+$ labcodes-cli start-project
 ```
 
 ### new member
@@ -62,7 +62,7 @@ $ labcodes start-project
 To complete your onboarding on the time, you need to type:
 
 ```sh
-$ labcodes new-member
+$ labcodes-cli new-member
 ```
 
 ### list projects
@@ -70,16 +70,17 @@ $ labcodes new-member
 To list all projects of our Github, you need to type:
 
 ```sh
-$ labcodes list-projects
+$ labcodes-cli list-projects
 ```
 
 ## Built With
 
-* [Storybook](https://storybook.js.org/) - Used as a UI development environment
-* [Babel](https://babeljs.io/) - Used to compile the code
-* [React](https://reactjs.org/) - Used to build the components
-* [Jest](https://facebook.github.io/jest/) - Used to test
-* [HTTP-Server](https://www.npmjs.com/package/http-server) - Used to start a HTTP server
+* [Simple Git](https://www.npmjs.com/package/simple-git) - Interface for running git commands
+* [Chalk](https://www.npmjs.com/package/chalk) - Terminal string styling
+* [Clear](https://www.npmjs.com/package/clear) - Clear the terminal screen
+* [Figlet](https://www.npmjs.com/package/figlet) - The FIGfont spec in JavaScrip
+* [Inquirer](https://www.npmjs.com/package/inquirer) - Interactive command line user interfaces
+* [Minimist](https://www.npmjs.com/package/minimist) - Parse argument options
 
 ## Contributors
 
