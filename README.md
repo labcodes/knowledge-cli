@@ -1,13 +1,6 @@
 # Labcodes CLI
 
-[![Build Status](https://travis-ci.org/thulioph/spotify-wrapper.svg?branch=master)](https://travis-ci.org/thulioph/spotify-wrapper)
-[![Coverage Status](https://coveralls.io/repos/github/thulioph/spotify-wrapper/badge.svg?branch=master)](https://coveralls.io/github/thulioph/spotify-wrapper?branch=master)
-
-A command line interface, to create boilerplates for frontend or backend projects!
-
-<!-- ## Dependencies
-
-This library depends on [Nodejs](https://nodejs.org/). -->
+> A command line interface, to create boilerplates for frontend or backend projects!
 
 ## Getting Started
 
