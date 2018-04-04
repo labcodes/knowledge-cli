@@ -23,7 +23,12 @@
     "inquirer": "^5.2.0",
     "lodash": "^4.17.5",
     "minimist": "^1.2.0",
+    "shelljs": "^0.8.1",
     "simple-git": "^1.92.0",
     "touch": "^3.1.0"
+  },
+  "engines": {
+    "node": ">= 8.10.0",
+    "npm": ">= 5.6.0"
   }
 }
