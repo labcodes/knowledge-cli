@@ -2,12 +2,14 @@
   "name": "labcodes-cli",
   "version": "1.0.0",
   "description": "Labcodes CLI",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "node ./index.js labcodes start-project",
+    "build": "npm run clear && npm run lint && npm run babel && npm run webpack:umd",
+    "clear": "rimraf dist && rimraf dale",
     "lint": "./node_modules/.bin/eslint lib/*.js",
-    "build": "echo \"Hey Ho!\""
+    "babel": "./node_modules/.bin/babel lib --out-dir dist",
+    "webpack:umd": "./node_modules/.bin/webpack -p"
   },
   "author": "Thulio Philipe <thulio@labcodes.com.br>",
   "license": "MIT",
@@ -17,10 +19,12 @@
   "preferGlobal": true,
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.10.0"
+    "eslint-plugin-import": "^2.10.0",
+    "webpack": "^4.5.0"
   },
   "dependencies": {
     "@octokit/rest": "^15.2.6",
