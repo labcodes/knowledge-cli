@@ -1,15 +1,16 @@
 {
   "name": "labcodes-cli",
-  "version": "1.1.0",
+  "version": "1.1.3",
   "description": "Labcodes CLI",
   "main": "lib/index.js",
   "scripts": {
     "start:dev": "node ./index.js labcodes start-project",
-    "build": "npm run clear && npm run lint && npm run babel && npm run webpack:umd",
+    "build": "npm run clear && npm run lint && npm run babel",
     "clear": "rimraf dist && rimraf dale",
     "lint": "./node_modules/.bin/eslint lib/*.js",
     "babel": "./node_modules/.bin/babel lib --out-dir dist",
-    "webpack:umd": "./node_modules/.bin/webpack -p"
+    "webpack:umd": "./node_modules/.bin/webpack -p",
+    "prepublish": "npm run build"
   },
   "author": "Thulio Philipe <thulio@labcodes.com.br>",
   "license": "MIT",
@@ -18,7 +19,8 @@
   },
   "files": [
     "dist",
-    "lib"
+    "lib",
+    "index.js"
   ],
   "preferGlobal": true,
   "devDependencies": {
@@ -43,5 +45,9 @@
   "engines": {
     "node": ">= 8.10.0",
     "npm": ">= 5.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/labcodes/knowledge-cli.git"
   }
 }
