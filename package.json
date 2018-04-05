@@ -4,7 +4,7 @@
   "description": "Labcodes CLI",
   "main": "lib/index.js",
   "scripts": {
-    "start:dev": "node ./index.js labcodes start-project",
+    "start:dev": "node ./index.js start-project",
     "build": "npm run clear && npm run lint && npm run babel",
     "clear": "rimraf dist && rimraf dale",
     "lint": "./node_modules/.bin/eslint lib/*.js",
