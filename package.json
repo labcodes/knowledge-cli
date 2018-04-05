@@ -2,7 +2,7 @@
   "name": "labcodes-cli",
   "version": "1.1.0",
   "description": "Labcodes CLI",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start:dev": "node ./index.js labcodes start-project",
     "build": "npm run clear && npm run lint && npm run babel && npm run webpack:umd",
@@ -14,7 +14,7 @@
   "author": "Thulio Philipe <thulio@labcodes.com.br>",
   "license": "MIT",
   "bin": {
-    "labcodes": "./index.js"
+    "labcodes-cli": "./index.js"
   },
   "files": [
     "dist",
