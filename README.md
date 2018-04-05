@@ -1,27 +1,84 @@
-## Labcodes CLI
+# Labcodes CLI
 
-> Just one command line.
+> A command line interface, to create boilerplates for frontend or backend projects!
 
-### Usage
+## Getting Started
 
-First, you need to install globally:
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-```
-  sudo npm install -g labcodes
-```
+## Development
 
-If you need some help, can you use:
+In development mode, you need to follow this instructions:
 
-```
-  labcodes --help
-```
+### Installation
 
-### Tests
-
-```
-npm run watch
+```sh
+$ npm install
 ```
 
-### NPM
+### Running
 
-This tools was published [here](https://www.npmjs.com/package/labcodes).
+#### development
+
+To run the project in **development** mode:
+
+```sh
+$ npm run start:dev
+```
+
+#### build
+
+To build the project in a separated folder:
+
+```sh
+$ npm run build
+```
+
+## How to use
+
+### Installation
+
+```sh
+$ npm install -g labcodes-cli
+```
+
+### start project
+
+To start a new project, Frontend or Backend you need to type:
+
+```sh
+$ labcodes-cli start-project
+```
+
+### new member
+
+To complete your onboarding on the time, you need to type:
+
+```sh
+$ labcodes-cli new-member
+```
+
+### list projects
+
+To list all projects of our Github, you need to type:
+
+```sh
+$ labcodes-cli list-projects
+```
+
+## Built With
+
+* [Simple Git](https://www.npmjs.com/package/simple-git) - Interface for running git commands
+* [Chalk](https://www.npmjs.com/package/chalk) - Terminal string styling
+* [Clear](https://www.npmjs.com/package/clear) - Clear the terminal screen
+* [Figlet](https://www.npmjs.com/package/figlet) - The FIGfont spec in JavaScrip
+* [Inquirer](https://www.npmjs.com/package/inquirer) - Interactive command line user interfaces
+* [Minimist](https://www.npmjs.com/package/minimist) - Parse argument options
+
+## Contributors
+
+See the list of [contributors](https://github.com/labcodes/cli/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.

@@ -1,24 +1,31 @@
 {
-  "name": "labcodes",
-  "version": "0.0.1",
+  "name": "labcodes-cli",
+  "version": "1.0.0",
   "description": "Labcodes CLI",
-  "main": "labcodes.js",
+  "main": "index.js",
   "scripts": {
-    "test": "istanbul cover _mocha -- -R spec",
-    "watch": "istanbul cover _mocha -- -R spec --watch"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "node ./index.js labcodes start-project",
+    "build": "echo \"Hey Ho!\""
   },
-  "author": "Thulio Philipe <thulioph@gmail.com>",
-  "license": "ISC",
-  "preferGlobal": true,
+  "author": "Thulio Philipe <thulio@labcodes.com.br>",
+  "license": "MIT",
   "bin": {
-    "labcodes": "labcodes.js"
+    "labcodes": "./index.js"
   },
-  "devDependencies": {
-    "istanbul": "^0.4.5",
-    "mocha": "^3.2.0",
-    "should": "^11.1.2"
-  },
+  "preferGlobal": true,
+  "devDependencies": {},
   "dependencies": {
-    "commander": "^2.9.0"
+    "@octokit/rest": "^15.2.6",
+    "chalk": "^2.3.2",
+    "clear": "^0.1.0",
+    "figlet": "^1.2.0",
+    "inquirer": "^5.2.0",
+    "minimist": "^1.2.0",
+    "simple-git": "^1.92.0"
+  },
+  "engines": {
+    "node": ">= 8.10.0",
+    "npm": ">= 5.6.0"
   }
 }
