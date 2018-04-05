@@ -1,4 +1,10 @@
+# Folders
 /coverage
+/dist
 /node_modules
+
+# Log
 npm-debug.log
+
+# OS files
 .DS_Store
