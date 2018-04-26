@@ -10,7 +10,10 @@
     "lint": "./node_modules/.bin/eslint lib/*.js",
     "babel": "./node_modules/.bin/babel lib --out-dir dist",
     "webpack:umd": "./node_modules/.bin/webpack -p",
-    "prepublish": "npm version patch && npm run build"
+    "prepublish": "npm version patch && npm run build",
+    "test": "jest",
+    "test:watch": "npm run test -- --watch",
+    "test:coverage": "npm run test -- --coverage"
   },
   "author": "Thulio Philipe <thulio@labcodes.com.br>",
   "license": "MIT",
@@ -30,6 +33,7 @@
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.10.0",
+    "jest": "^22.4.3",
     "webpack": "^4.5.0",
     "webpack-cli": "^2.0.14"
   },
