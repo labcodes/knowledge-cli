@@ -1,6 +1,6 @@
 # Labcodes CLI
 
-> A command line interface, to create boilerplates for frontend or backend projects!
+> A command line interface, to help your daily in our team!
 
 ## Getting Started
 
@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Development
 
-In development mode, you need to follow this instructions:
+In **development mode**, you need to follow this instructions:
 
 ### Installation
 
@@ -19,8 +19,6 @@ $ npm install
 ### Running
 
 #### development
-
-To run the project in **development** mode:
 
 ```sh
 $ npm run start:dev
@@ -44,7 +42,7 @@ $ npm install -g labcodes-cli
 
 ### start project
 
-To start a new project, Frontend or Backend you need to type:
+To start a **new project**, frontend or backend:
 
 ```sh
 $ labcodes-cli start-project
@@ -52,7 +50,7 @@ $ labcodes-cli start-project
 
 ### new member
 
-To complete your onboarding on the time, you need to type:
+To complete **your onboarding** on the team:
 
 ```sh
 $ labcodes-cli new-member
@@ -60,7 +58,7 @@ $ labcodes-cli new-member
 
 ### list projects
 
-To list all projects of our Github, you need to type:
+To **list all the projects** of our Github:
 
 ```sh
 $ labcodes-cli list-projects
