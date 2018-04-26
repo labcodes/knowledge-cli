@@ -42,6 +42,20 @@ To [publish](https://docs.npmjs.com/getting-started/publishing-npm-packages) or 
 $ npm publish
 ```
 
+#### test
+
+```sh
+$ npm run test
+```
+
+```sh
+$ npm run test:watch
+```
+
+```sh
+$ npm run test:coverage
+```
+
 ## How to use
 
 ### Installation
@@ -79,9 +93,11 @@ $ labcodes-cli list-projects
 * [Simple Git](https://www.npmjs.com/package/simple-git) - Interface for running git commands
 * [Chalk](https://www.npmjs.com/package/chalk) - Terminal string styling
 * [Clear](https://www.npmjs.com/package/clear) - Clear the terminal screen
-* [Figlet](https://www.npmjs.com/package/figlet) - The FIGfont spec in JavaScrip
+* [Figlet](https://www.npmjs.com/package/figlet) - The FIGfont spec in JavaScript
 * [Inquirer](https://www.npmjs.com/package/inquirer) - Interactive command line user interfaces
 * [Minimist](https://www.npmjs.com/package/minimist) - Parse argument options
+* [Jest](https://facebook.github.io/jest) - Used to test
+* [Sentry](https://docs.sentry.io/clients/node/) - Used as an error tracking
 
 ## Contributors
 
