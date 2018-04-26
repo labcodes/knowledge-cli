@@ -1,6 +1,6 @@
 {
   "name": "labcodes-cli",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Labcodes CLI",
   "main": "lib/index.js",
   "scripts": {
