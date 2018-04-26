@@ -32,6 +32,14 @@ To build the project in a separated folder:
 $ npm run build
 ```
 
+#### publish
+
+To [publish](https://docs.npmjs.com/getting-started/publishing-npm-packages) or update any change:
+
+```sh
+$ npm publish
+```
+
 ## How to use
 
 ### Installation
