@@ -1,0 +1,74 @@
+# Javascript Node CircleCI 2.0 configuration file
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+
+defaults: &startContainer
+    working_directory: ~/knowledge-cli
+    docker:
+        - image: circleci/node:7.10
+
+defaults: &npmInstall
+    name: Installing all dependencies
+    command: npm install
+
+version: 2
+jobs:
+    test-job:
+        <<: *startContainer
+        steps:
+            - checkout
+            - restore_cache:
+                keys:
+                    - app-dependencies-v1-{{ checksum "package.json" }}
+            - run:
+                <<: *npmInstall
+            - save_cache:
+                key: app-dependencies-v1-{{ checksum "package.json" }}
+                paths:
+                    - node_modules
+            - run:
+                name: Running the tests
+                command: npm run test
+    build-job:
+        <<: *startContainer
+        steps:
+            - checkout
+            - restore_cache:
+                keys:
+                    - app-dependencies-v2-{{ checksum "package.json" }}
+                    - app-dependencies-v1-{{ checksum "package.json" }}
+            - run:
+                <<: *npmInstall
+            - save_cache:
+                key: app-dependencies-v2-{{ checksum "package.json" }}
+                paths:
+                    - node_modules
+            - run:
+                name: Build the project
+                command: npm run build
+    publish-job:
+        <<: *startContainer
+        steps:
+            - checkout
+            - restore_cache:
+                keys:
+                    - app-dependencies-v2-{{ checksum "package.json" }}
+                    - app-dependencies-v1-{{ checksum "package.json" }}
+            - run:
+                <<: *npmInstall
+            - run:
+                name: Build the project
+                command: npm run build
+            - run:
+                name: Publish the package to NPM
+                command: npm publish
+workflows:
+    version: 2
+    build-publish:
+        jobs:
+            - test-job
+            - build-job:
+                requires:
+                    - test-job
+            - publish-job:
+                requires:
+                    - build-job
