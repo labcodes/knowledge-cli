@@ -10,7 +10,7 @@
     "lint": "./node_modules/.bin/eslint lib/*.js",
     "babel": "./node_modules/.bin/babel lib --out-dir dist",
     "webpack:umd": "./node_modules/.bin/webpack -p",
-    "prepublish": "npm run build"
+    "prepublish": "npm version patch && npm run build"
   },
   "author": "Thulio Philipe <thulio@labcodes.com.br>",
   "license": "MIT",
