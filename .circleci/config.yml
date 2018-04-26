@@ -75,3 +75,6 @@ workflows:
             - publish-job:
                 requires:
                     - build-job
+                filters:
+                    branches:
+                        only: master
