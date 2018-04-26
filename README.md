@@ -77,7 +77,7 @@ $ labcodes-cli list-projects
 
 ## Contributors
 
-See the list of [contributors](https://github.com/labcodes/cli/contributors) who participated in this project.
+See the list of [contributors](https://github.com/labcodes/knowledge-cli/contributors) who participated in this project.
 
 ## License
 
