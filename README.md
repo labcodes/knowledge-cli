@@ -1,5 +1,7 @@
 # Labcodes CLI
 
+[![CircleCI](https://circleci.com/gh/labcodes/knowledge-cli/tree/master.svg?style=svg&circle-token=d06228bbf3f4f920216316bc2d667686163d15bf)](https://circleci.com/gh/labcodes/knowledge-cli/tree/master)
+
 > A command line interface, to help your daily in our team!
 
 ## Getting Started
@@ -40,6 +42,20 @@ To [publish](https://docs.npmjs.com/getting-started/publishing-npm-packages) or 
 $ npm publish
 ```
 
+#### test
+
+```sh
+$ npm run test
+```
+
+```sh
+$ npm run test:watch
+```
+
+```sh
+$ npm run test:coverage
+```
+
 ## How to use
 
 ### Installation
@@ -77,9 +93,11 @@ $ labcodes-cli list-projects
 * [Simple Git](https://www.npmjs.com/package/simple-git) - Interface for running git commands
 * [Chalk](https://www.npmjs.com/package/chalk) - Terminal string styling
 * [Clear](https://www.npmjs.com/package/clear) - Clear the terminal screen
-* [Figlet](https://www.npmjs.com/package/figlet) - The FIGfont spec in JavaScrip
+* [Figlet](https://www.npmjs.com/package/figlet) - The FIGfont spec in JavaScript
 * [Inquirer](https://www.npmjs.com/package/inquirer) - Interactive command line user interfaces
 * [Minimist](https://www.npmjs.com/package/minimist) - Parse argument options
+* [Jest](https://facebook.github.io/jest) - Used to test
+* [Sentry](https://docs.sentry.io/clients/node/) - Used as an error tracking
 
 ## Contributors
 

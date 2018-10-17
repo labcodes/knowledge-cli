@@ -1,0 +1,79 @@
+# Javascript Node CircleCI 2.0 configuration file
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+
+defaults: &setup
+    working_directory: ~/knowledge-cli
+    docker:
+        - image: circleci/node:8.10
+
+version: 2
+jobs:
+    test-job:
+        <<: *setup
+        steps:
+            - checkout
+            - restore_cache:
+                keys:
+                    - app-dependencies-v1-{{ checksum "package.json" }}
+            - run:
+                name: Installing all dependencies
+                command: npm install
+            - save_cache:
+                key: app-dependencies-v1-{{ checksum "package.json" }}
+                paths:
+                    - node_modules
+            - run:
+                name: Running the tests
+                command: npm run test
+    build-job:
+        <<: *setup
+        steps:
+            - checkout
+            - restore_cache:
+                keys:
+                    - app-dependencies-v2-{{ checksum "package.json" }}
+                    - app-dependencies-v1-{{ checksum "package.json" }}
+            - run:
+                name: Installing all dependencies
+                command: npm install
+            - save_cache:
+                key: app-dependencies-v2-{{ checksum "package.json" }}
+                paths:
+                    - node_modules
+            - run:
+                name: Build the project
+                command: npm run build
+    publish-job:
+        <<: *setup
+        steps:
+            - checkout
+            - restore_cache:
+                keys:
+                    - app-dependencies-v2-{{ checksum "package.json" }}
+                    - app-dependencies-v1-{{ checksum "package.json" }}
+            - run:
+                name: Installing all dependencies
+                command: npm install
+            - run:
+                name: Build the project
+                command: npm run build
+            - run:
+                name: Authenticate with registry
+                command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+            - run:
+                name: Publish the package to NPM
+                command: npm publish
+workflows:
+    version: 2
+    build-publish:
+        jobs:
+            - test-job
+            - build-job:
+                requires:
+                    - test-job
+            - publish-job:
+                requires:
+                    - build-job
+                filters:
+                    branches:
+                        only: master
