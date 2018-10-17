@@ -1,26 +1,23 @@
 # Javascript Node CircleCI 2.0 configuration file
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 
-defaults: &startContainer
+defaults: &setup
     working_directory: ~/knowledge-cli
     docker:
-        - image: circleci/node:7.10
-
-defaults: &npmInstall
-    name: Installing all dependencies
-    command: npm install
+        - image: circleci/node:8.10
 
 version: 2
 jobs:
     test-job:
-        <<: *startContainer
+        <<: *setup
         steps:
             - checkout
             - restore_cache:
                 keys:
                     - app-dependencies-v1-{{ checksum "package.json" }}
             - run:
-                <<: *npmInstall
+                name: Installing all dependencies
+                command: npm install
             - save_cache:
                 key: app-dependencies-v1-{{ checksum "package.json" }}
                 paths:
@@ -29,7 +26,7 @@ jobs:
                 name: Running the tests
                 command: npm run test
     build-job:
-        <<: *startContainer
+        <<: *setup
         steps:
             - checkout
             - restore_cache:
@@ -37,7 +34,8 @@ jobs:
                     - app-dependencies-v2-{{ checksum "package.json" }}
                     - app-dependencies-v1-{{ checksum "package.json" }}
             - run:
-                <<: *npmInstall
+                name: Installing all dependencies
+                command: npm install
             - save_cache:
                 key: app-dependencies-v2-{{ checksum "package.json" }}
                 paths:
@@ -46,7 +44,7 @@ jobs:
                 name: Build the project
                 command: npm run build
     publish-job:
-        <<: *startContainer
+        <<: *setup
         steps:
             - checkout
             - restore_cache:
@@ -54,7 +52,8 @@ jobs:
                     - app-dependencies-v2-{{ checksum "package.json" }}
                     - app-dependencies-v1-{{ checksum "package.json" }}
             - run:
-                <<: *npmInstall
+                name: Installing all dependencies
+                command: npm install
             - run:
                 name: Build the project
                 command: npm run build
